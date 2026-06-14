@@ -33,7 +33,6 @@ export default class drawsteelEstimationProvider extends EstimationProvider {
 			{
 				name: "Objects",
 				rule: "type === \"object\"",
-				
 				estimates: [
 					{ value: 0, label: t("core.estimates.vehicles.0") },
 					{ value: 20, label: t("core.estimates.vehicles.1") },
