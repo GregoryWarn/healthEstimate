@@ -33,7 +33,7 @@ export class HealthEstimateHooks {
 		canvas.interface.healthEstimate.height = height;
 		canvas.interface.healthEstimate.eventMode = "none";
 		canvas.interface.healthEstimate.interactiveChildren = false;
-		canvas.interface.healthEstimate.zIndex = CONFIG.Canvas.groups.interface.zIndexScrollingText;
+		canvas.interface.healthEstimate.zIndex = 200;
 
 		/** @type {[Token]} */
 		const tokens = canvas.tokens?.placeables.filter((e) => e.actor) ?? [];
