@@ -58,8 +58,8 @@ export default class EstimationProvider {
 		this.addTemp = false;
 
 		/**
-		 * Sets if the "Hide on tokens with 0 max HP" setting is enabled.
-		 * @type {Boolean}
+		 * Sets the default value for the "Hide on tokens with 0 max HP" setting. Hidden if set to false.
+		 * @type {false|String}
 		 */
 		this.breakOnZeroMaxHP = false;
 

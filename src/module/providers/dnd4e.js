@@ -6,7 +6,7 @@ export default class dnd4eEstimationProvider extends EstimationProvider {
 		super();
 		this.organicTypes = ["Player Character", "NPC"];
 		this.addTemp = true;
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 	}
 
 	fraction(token) {

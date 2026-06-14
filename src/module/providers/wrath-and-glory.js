@@ -5,7 +5,7 @@ export default class wrathAndGloryEstimationProvider extends EstimationProvider 
 	constructor() {
 		super();
 		this.addTemp = true;
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.organicTypes = ["agent", "threat"];
 	}
 

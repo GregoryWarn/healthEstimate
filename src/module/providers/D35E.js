@@ -12,7 +12,7 @@ export default class D35EEstimationProvider extends EstimationProvider {
 		}
 		const totalHp = hp.value + addTemp;`;
 		this.addTemp = true;
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.estimations = [
 			...this.estimations,
 			{

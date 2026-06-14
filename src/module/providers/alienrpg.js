@@ -8,7 +8,7 @@ export default class alienrpgEstimationProvider extends EstimationProvider {
 			config: true,
 			vehicles: ["vehicles", "spacecraft"],
 		};
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.estimations = [
 			...this.estimations,
 			{

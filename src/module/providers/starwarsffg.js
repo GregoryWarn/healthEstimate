@@ -8,7 +8,7 @@ export default class starwarsffgEstimationProvider extends EstimationProvider {
 			config: true,
 			vehicles: ["vehicle"],
 		};
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.estimations = [
 			...this.estimations,
 			{

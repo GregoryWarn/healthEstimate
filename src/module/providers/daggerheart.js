@@ -4,7 +4,7 @@ export default class daggerheartEstimationProvider extends EstimationProvider {
 	constructor() {
 		super();
 		this.organicTypes = ["character", "adversary", "companion"];
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.estimations = [
 			...this.estimations,
 			{

@@ -5,7 +5,7 @@ export default class tormenta20EstimationProvider extends EstimationProvider {
 	constructor() {
 		super();
 		this.addTemp = true;
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 	}
 
 	_breakAttribute = "token.actor.system.attributes.pv.max";

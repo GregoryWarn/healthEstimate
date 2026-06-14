@@ -7,7 +7,7 @@ function l(key) {
 export default class splittermondEstimationProvider extends EstimationProvider {
 	constructor() {
 		super();
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 
 		const notinjured = l("notinjured");
 		const battered = l("battered");

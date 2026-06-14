@@ -8,7 +8,7 @@ export default class twodsixEstimationProvider extends EstimationProvider {
 			config: true,
 			vehicles: ["vehicle", "ship"],
 		};
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.estimations = [
 			...this.estimations,
 			{

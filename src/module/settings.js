@@ -113,10 +113,11 @@ export const registerSettings = function () {
 		type: Boolean,
 		default: false,
 	});
+	const breakOnZeroMaxHP = game.healthEstimate.estimationProvider.breakOnZeroMaxHP;
 	addSetting("core.breakOnZeroMaxHP", {
-		config: game.healthEstimate.estimationProvider.breakOnZeroMaxHP,
+		config: breakOnZeroMaxHP !== false,
 		type: new StringField({
-			required: true, initial: "none", choices: {
+			required: true, initial: breakOnZeroMaxHP || "none", choices: {
 				none: "healthEstimate.core.breakOnZeroMaxHP.options.none",
 				zero: "healthEstimate.core.breakOnZeroMaxHP.options.zero",
 				one: "healthEstimate.core.breakOnZeroMaxHP.options.one",

@@ -5,7 +5,7 @@ export default class wfrp4eEstimationProvider extends EstimationProvider {
 	constructor() {
 		super();
 		this.vehicleRules.config = true;
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.estimations = [
 			...this.estimations,
 			{

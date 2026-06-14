@@ -5,7 +5,7 @@ export default class pf1EstimationProvider extends EstimationProvider {
 	constructor() {
 		super();
 		this.addTemp = true;
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.customLogic = `
 		const hp = token.actor.system.attributes.hp;
 		let addTemp = 0;

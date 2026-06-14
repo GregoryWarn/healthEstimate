@@ -10,7 +10,7 @@ export default class sfrpgEstimationProvider extends EstimationProvider {
 			vehicles: ["starship", "vehicle"],
 		};
 		this.addTemp = true;
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.estimations = [
 			...this.estimations,
 			{

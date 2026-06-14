@@ -5,7 +5,7 @@ export default class trpgEstimationProvider extends EstimationProvider {
 	constructor() {
 		super();
 		this.addTemp = true;
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 	}
 
 	fraction(token) {

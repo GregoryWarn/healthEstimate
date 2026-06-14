@@ -6,7 +6,7 @@ export default class t2k4eEstimationProvider extends EstimationProvider {
 		super();
 		this.vehicleRules.config = true;
 		this.addTemp = true;
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.estimations = [
 			...this.estimations,
 			{

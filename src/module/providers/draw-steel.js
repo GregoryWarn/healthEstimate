@@ -5,7 +5,7 @@ export default class drawsteelEstimationProvider extends EstimationProvider {
 	constructor() {
 		super();
 		this.organicTypes = ["hero", "npc"];
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.estimations = [
 			{
 				name: "",

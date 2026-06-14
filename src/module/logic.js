@@ -359,7 +359,7 @@ export class HealthEstimate {
 	 */
 	getFraction(token) {
 		const fraction = Math.max(0, Math.min(this.estimationProvider.fraction(token), 1));
-		if (!Number.isNumeric(fraction)) {
+		if (CONFIG.debug.healthEstimate && !Number.isNumeric(fraction)) {
 			throw Error("Token's fraction is not valid, it probably doesn't have a numerical HP or Max HP value.");
 		}
 		return fraction;

@@ -9,7 +9,7 @@ export default class dnd5eEstimationProvider extends EstimationProvider {
 			vehicles: ["vehicle"],
 		};
 		this.addTemp = true;
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 		this.estimations = [
 			...this.estimations,
 			{

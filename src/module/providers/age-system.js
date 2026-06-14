@@ -3,7 +3,7 @@ import EstimationProvider from "./templates/Base.js";
 export default class ageSystemEstimationProvider extends EstimationProvider {
 	constructor() {
 		super();
-		this.breakOnZeroMaxHP = true;
+		this.breakOnZeroMaxHP = "zero";
 	}
 
 	_breakAttribute = "token.actor.system.health";
