@@ -87,7 +87,7 @@ export function settingData(key) {
 }
 
 export function disableCheckbox(checkbox, boolean) {
-	checkbox.disabled = !boolean;
+	if (checkbox) checkbox.disabled = !boolean;
 }
 
 /**
