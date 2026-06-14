@@ -269,6 +269,12 @@
 				"hint": "Sets the maximum health level (current / maximum, fraction 0.0 - 1.0) that can be reported for a PC that is Debilitated on the Death Track"
 			}
 		},
+		"draw-steel": {
+			"hideObjectHP": {
+				"name": "Hide Object's Estimate",
+				"hint": "Hides the estimate from Objects."
+			}
+		},
 		"PF1": {
 			"addNonlethal": {
 				"name": "Use Nonlethal Damage",

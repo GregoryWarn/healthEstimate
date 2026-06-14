@@ -6,6 +6,7 @@ export default class drawsteelEstimationProvider extends EstimationProvider {
 		super();
 		this.organicTypes = ["hero", "npc"];
 		this.breakOnZeroMaxHP = "zero";
+		this.vehicleRules.vehicles = ["object"];
 		this.estimations = [
 			{
 				name: "",
@@ -30,6 +31,19 @@ export default class drawsteelEstimationProvider extends EstimationProvider {
 				]
 			},
 			{
+				name: "Objects",
+				rule: "type === \"object\"",
+				
+				estimates: [
+					{ value: 0, label: t("core.estimates.vehicles.0") },
+					{ value: 20, label: t("core.estimates.vehicles.1") },
+					{ value: 40, label: t("core.estimates.vehicles.2") },
+					{ value: 60, label: t("core.estimates.vehicles.3") },
+					{ value: 80, label: t("core.estimates.vehicles.4") },
+					{ value: 100, label: t("core.estimates.vehicles.5") },
+				],
+			},
+			{
 				name: "Unconscious",
 				ignoreColor: true,
 				rule: "effects.values().some((ef) => ef.statuses.has('sleep'));",
@@ -38,11 +52,25 @@ export default class drawsteelEstimationProvider extends EstimationProvider {
 		];
 	}
 
-	fraction(token) {
-		const minHealth = token.actor.system.stamina.min;
-		const maxHealth = token.actor.system.stamina.max;
-		const currentHealth = token.actor.system.stamina.value;
+	_breakAttribute = "token.actor.system.stamina.max";
 
-		return (currentHealth - minHealth) / (maxHealth - minHealth);
+	fraction(token) {
+		const stamina = token.actor.system.stamina;
+		return (stamina.value - stamina.min) / (stamina.max - stamina.min);
+	}
+
+	get settings() {
+		return {
+			"draw-steel.hideObjectHP": {
+				type: Boolean,
+				default: true,
+			}
+		};
+	}
+
+	get breakCondition() {
+		return `|| ${this.isVehicle} && game.settings.get('healthEstimate', 'draw-steel.hideObjectHP')
+		|| ${this._breakAttribute} === null
+		${super.breakCondition}`;
 	}
 }
