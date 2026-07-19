@@ -315,7 +315,7 @@ export const registerSettings = function () {
 		return fonts;
 	};
 	addMenuSetting("core.menuSettings.fontFamily", {
-		name: game.i18n.localize("EDITOR.Font"),
+		name: game.i18n.localize("EDITOR.Font.Title"),
 		type: String,
 		default: CONFIG.canvasTextStyle.fontFamily,
 		choices: getFonts(),
