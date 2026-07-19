@@ -130,6 +130,7 @@ export class HealthEstimateHooks {
 		const displayed = token.hover || canvas.tokens.highlightObjects;
 		game.healthEstimate._handleOverlay(token, game.healthEstimate.showCondition(displayed));
 		if (flags.refreshSize && game.healthEstimate.tooltipPosition) repositionTooltip(token);
+		game.healthEstimate.provider.refreshToken?.(token, flags);
 	}
 
 	static onCombatStart(combat, updateData) {

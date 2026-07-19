@@ -37,6 +37,16 @@ export default class pf2eEstimationProvider extends EstimationProvider {
 		return Math.min((hp.value + sp.value + temp) / (hp.max + sp.max), 1);
 	}
 
+	refreshToken(token, flags) {
+		const top = game.settings.get("healthEstimate", "core.menuSettings.position2") === "a";
+		if (top && token.healthEstimate && flags.refreshDistanceLabel) {
+			const labelEl = document.getElementById("token-hover-distance");
+			let y = parseFloat(labelEl.style.getPropertyValue("--position-y"));
+			y -= token.healthEstimate.height;
+			labelEl.style.setProperty("--position-y", `${y}px`);
+		}
+	}
+
 	get settings() {
 		return {
 			"PF2E.staminaToHp": {
