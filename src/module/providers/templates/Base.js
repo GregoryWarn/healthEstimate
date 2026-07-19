@@ -96,6 +96,15 @@ export default class EstimationProvider {
 	}
 
 	/**
+	 * System-specific logic for the refreshToken hook.
+	 * @param {Token} token
+	 * @param {Object} flags
+	 *
+	 * @see pf2eEstimationProvider
+	 */
+	refreshToken(token, flags) {}
+
+	/**
 	 * Returns a set of system-specific settings. All settings are registered as part of the healthEstimate module.
 	 *
 	 * Names and Hints are unnecessary if they are set as "systemname.setting.name" and "systemname.setting.hint".
